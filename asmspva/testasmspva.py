@@ -33,4 +33,4 @@ async def testAsyncSmsPva(apiKey: str):
         await testApi('ban', asmspva.denial('opt4','RU',number['id']))
     await testApi('get2FA', asmspva.get2FA('1234567890'))
 
-    print('--- asmspva test complted ---')
+    print('--- asmspva test completed ---')
