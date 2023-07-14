@@ -1,4 +1,4 @@
-from .asmspva import testAsyncSmsPva
+from asmspva import testAsyncSmsPva
 import asyncio
 
 if __name__ == '__main__':
