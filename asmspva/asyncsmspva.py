@@ -41,8 +41,8 @@ class AsyncSmsPva:
                 try:
                     respText = await resp.text()
                     respJson = json.loads(respText)
-                except ValueError:
-                    return False
+                except ValueError as e:
+                    raise AsyncSmsPvaException(f"Request failed: {str(e)}")
                 return self.checkResponse(respJson, successResponseCode, noSmsCode)
 
     async def getBalance(self, service: str):
