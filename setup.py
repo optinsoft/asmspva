@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(name='asmspva',
-    version='1.0',
+    version='1.1',
     description='Async API wrapper for smspva',
     install_requires=["aiohttp","certifi"],
     author='optinsoft',
