@@ -1,7 +1,11 @@
 from distutils.core import setup
+import re
+
+s = open('asmspva/version.py').read()
+v = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", s, re.M).group(1)
 
 setup(name='asmspva',
-    version='1.1',
+    version=v,
     description='Async API wrapper for smspva',
     install_requires=["aiohttp","certifi"],
     author='optinsoft',
